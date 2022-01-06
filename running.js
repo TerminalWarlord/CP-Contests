@@ -42,10 +42,9 @@ fetch(`https://cp-contests.vercel.app/running`)
     contests.innerHTML = html;
 })
 
-
-var today = new Date();
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-var time = today.getHours() + ":" + today.getMinutes();
-var dateTime = date+' '+time + '<br>';
-dateTime += 'Timezone : +00:00';
-const timezone = document.getElementById('timezone').innerHTML = dateTime;
+fetch('https://cp-contests.vercel.app/time')
+.then(response=>response.json())
+.then(data=>{
+    const dateTime = `${data['time']}<br>Timezone : +00:00`;
+    const timezone = document.getElementById('timezone').innerHTML = dateTime;
+})
