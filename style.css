@@ -346,11 +346,11 @@ footer{
         display: none;
     }
     #fetch-upcoming tr th{
-        font-size: .8rem;
+        font-size: .7rem;
     }
     #fetch-running tr th,
     #recent-centests tr th{
-        font-size: .8rem;
+        font-size: .7rem;
     }
     .content-table th,
     .content-table td{
@@ -406,6 +406,9 @@ footer{
     }
     .cfList th{
         font-size: 0.8rem;
+    }
+    .tb{
+        font-size: 0.5rem;
     }
 }
 
