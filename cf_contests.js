@@ -27,6 +27,8 @@ function fetchQuery(){
             if(data['status'] === 'FAILED'){
                 html = `<tr><th>Failed to fetch data for ${query}<th></tr>`;
             }
+            // <th>${data['result'][i]['handle']}</th>
+
             else{
                 for(let i=0; i<data['result'].length; i++){
                     loader.classList.add('hide-item');
@@ -35,7 +37,6 @@ function fetchQuery(){
                             <th>${i+1}</th>
                             <th>${data['result'][i]['contestId']}</th>
                             <th>${data['result'][i]['contestName']}</th>
-                            <th>${data['result'][i]['handle']}</th>
                             <th>${data['result'][i]['newRating']}</th>
                             <th>${data['result'][i]['oldRating']}</th>
                             <th>${data['result'][i]['rank']}</th>
