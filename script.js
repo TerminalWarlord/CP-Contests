@@ -5,12 +5,12 @@ const loader = document.getElementById('loader');
 
 
 
-fetch(`https://cp-contests.vercel.app`)
+fetch(`https://cp-contests.vercel.app/running`)
 .then(response => response.json())
 .then(data=>{
     let html = '';
     if(data){
-        for(let i=0; i<5; i++){
+        for(let i=0; i<10; i++){
             let host = data[i][1]['host'];
             if(host.length>15){
                 host = host.substring(0, 15).concat('...');
