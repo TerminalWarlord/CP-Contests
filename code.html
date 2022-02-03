@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Competitive Programming Contests - TerminalWarlord</title>
+    <script src="https://kit.fontawesome.com/2e31da520b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.js"></script>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./asset/code.css">
+    <link rel="stylesheet" href="./asset/prism.css">
     <meta name="title" content="Competitive Programming Contests - TerminalWarlord">
     <meta name="description" content="Get the list of all Running and Upcoming competitive programming contests">
     <meta name="keywords" content="competitive programming contests, cp contests, competitive programming, programming contests, terminalwarlord, terminal warlord, cp, acm, jaybee">
@@ -45,9 +48,9 @@
     <meta name="google-site-verification" content="_6SBfsN_BrRvvvY2WQCDM3M0XPrzA2wkaBZb2RdaNXQ" />
 </head>
 <body>
-    <header id="logo">
-      <a href="./index.html"><img src="./logo.png" alt="TerminalWarlord"></a>
-    </header>
+  <header id="logo">
+    <a href="./index.html"><img src="./logo.png" alt="TerminalWarlord"></a>
+  </header>
     <nav class="navbar-mbl" id="ismbl">
       <ul class="navmbl">
         <li class="navmbl-item"><a href="./index.html"><i class="fas fa-home"></i></a></li>
@@ -193,34 +196,52 @@
         </ul>
     </nav>
     <main>
-        
-        <div class="about-content">
-            <h3>Navigation Bar</h3>
-            <p>The PC navbar of this project is heavily inspired from one of FIRESHIP.IO's episodes. Every thing apart from that is made out of scratch.</p>
-            <h3>API</h3>
-            I've built an API to fetch contests' data. Here I'm just calling the API and fetching its data.<br>
-            <b>API : </b><code>https://cp-contests.vercel.com/</code><br>
-            <b>Method :</b> <code>GET</code><br>
-            <b>Parameter :</b> <code>Any valid timezone</code><br>
-            If you want to learn more about it you can contact me at <b><em>dev.jaybee@gmail.com</em></b><br>
-            <h3>Developer: <a class="con-link" href="https://terminalwarlord.github.io" target="_blank" rel="noopener noreferrer">TerminalWarlord</a></h3>
-            <h3>RESOURCES:</h3>
-            <ol>
-                <li><a class="con-link" href="https://youtu.be/biOMz4puGt8" target="_blank" rel="noopener noreferrer">NavBar Tutorial</a></li>
-                <li><a class="con-link" href="https://cp-contests.vercel.com/" target="_blank" rel="noopener noreferrer">API</a></li>
-            </ol>
-        </p>
+        <div class="code-content">
+            
+            <div class="source">
+                <h3>Source:</h3>
+
+                <pre><code class="language-py">
+def main():
+    n,m,a = map(int, input().split())
+    p = int(n/a)
+    q = int(m/a)
+    if n%a!=0:
+        p += 1
+    if m%a!=0:
+        q += 1
+    print(p*q, "\n")
+main()
+                </code></pre>
+            </div>
+            <div class="input">
+                <h3>Input:</h3>
+
+                <pre><code class="language-markup">
+1
+2
+3
+                </code></pre>
+            </div>
+            
+            <div class="output">
+                <h3>Output:</h3>
+                <pre><code class="language-markup">
+1
+2
+3
+            </code></pre></div>
         </div>
         
         <footer>
-            <div class="footer">
-              Developed by JAYBEE<br>
-              &copy; <a class="con-link" href="https://github.com/TerminalWarlord" target="_blank" rel="noopener noreferrer">TerminalWarlord</a>, All rights reserved.
-            </div>
-        </footer>
+          <div class="footer">
+            Developed by JAYBEE<br>
+            &copy; <a class="con-link" href="https://github.com/TerminalWarlord" target="_blank" rel="noopener noreferrer">TerminalWarlord</a>, All rights reserved.
+          </div>
+      </footer>
         <div id="timezone"></div>
     </main>
-    <!-- <script src="script.js"></script> -->
-    <script src="https://kit.fontawesome.com/2e31da520b.js" crossorigin="anonymous"></script>
+    <script src="./asset/code.js"></script>
+    <script src="./asset/prism.js"></script>
 </body>
 </html>
