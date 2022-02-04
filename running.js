@@ -1,27 +1,6 @@
-// running.addEventListener('click', runningList);
-
-// function runningList(){
-//     let allRunning = document.getElementById('running-list');
-//     fetch(`https://cp-contests.vercel.app/running`)
-//     .then(response => response.json())
-//     .then(data=>console.log(data))
-// }
-
-
 const contests = document.getElementById('fetch-con');
 const loader = document.getElementById('loader');
-
-var timeZone = ''
-var timeZonePoint = ''
-fetch(`https://api.ipregistry.co/?key=xu1vqqbg0xmho0nq`)
-    .then(response => response.json())
-    .then(data=>{
-        timeZonePoint = data.time_zone.current_time;
-        timeZonePoint = timeZonePoint.substr(timeZonePoint.length-6, timeZonePoint.length);
-        timeZone = data.time_zone.id;
-    })
-if(timeZone=='') timeZone='Asia/Dhaka', timeZonePoint="+06:00";
-
+var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
 fetch(`https://cp-contests.vercel.app/running/?timeZone=${timeZone}`)
 .then(response => response.json())
 .then(data=>{
@@ -56,6 +35,6 @@ fetch(`https://cp-contests.vercel.app/running/?timeZone=${timeZone}`)
 fetch(`https://cp-contests.vercel.app/time/?timeZone=${timeZone}`)
 .then(response=>response.json())
 .then(data=>{
-    const dateTime = `${data}<br>Timezone : ${timeZonePoint}`;
+    const dateTime = `${data}<br>Timezone : ${timeZone}`;
     const timezone = document.getElementById('timezone').innerHTML = dateTime;
 })

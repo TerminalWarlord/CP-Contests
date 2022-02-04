@@ -1,17 +1,8 @@
 const running = document.getElementById('fetch-running');
 const upcoming = document.getElementById('fetch-upcoming');
 const loader = document.getElementById('loader');
-// const running = document.getElementById('running');
-var timeZone = ''
-var timeZonePoint = ''
-fetch(`https://api.ipregistry.co/?key=xu1vqqbg0xmho0nq`)
-    .then(response => response.json())
-    .then(data=>{
-        timeZonePoint = data.time_zone.current_time;
-        timeZonePoint = timeZonePoint.substr(timeZonePoint.length-6, timeZonePoint.length);
-        timeZone = data.time_zone.id;
-    })
-if(timeZone=='') timeZone='Asia/Dhaka', timeZonePoint="+06:00";
+var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
+
 fetch(`https://cp-contests.vercel.app/running/?timeZone=${timeZone}`)
 .then(response => response.json())
 .then(data=>{
@@ -78,6 +69,6 @@ fetch(`https://cp-contests.vercel.app/?timeZone=${timeZone}`)
 fetch(`https://cp-contests.vercel.app/time/?timeZone=${timeZone}`)
 .then(response=>response.json())
 .then(data=>{
-    const dateTime = `${data}<br>Timezone : ${timeZonePoint}`;
+    const dateTime = `${data}<br>Timezone : ${timeZone}`;
     const timezone = document.getElementById('timezone').innerHTML = dateTime;
 })

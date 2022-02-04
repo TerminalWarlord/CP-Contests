@@ -417,7 +417,7 @@ footer{
     #ispc{
         display: none;
     }
-    #fetch-upcoming tr th{
+    #fetch-upcoming tr thm{
         font-size: .7rem;
     }
     #fetch-running tr th,

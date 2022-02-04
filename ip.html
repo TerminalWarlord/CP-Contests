@@ -8,13 +8,9 @@
 </head>
 <body>
     <script>
-        fetch(`https://api.ipregistry.co/?key=xu1vqqbg0xmho0nq`)
-        .then(response => response.json())
-        .then(data=>{
-            console.log(data);
-            console.log(data.time_zone.id);
-        })
-
+        // var timeZone = new Date().getTimezoneOffset();
+        var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        console.log(timeZone);
     </script>
 </body>
 </html>

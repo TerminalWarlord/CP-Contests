@@ -4,16 +4,16 @@ const contests = document.getElementById('recent-centests');
 const loader = document.getElementById('loader');
 const statsCard = document.getElementById('Cards');
 statsCard.classList.add("hide-item");
-var timeZone = ''
+var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
 var timeZonePoint = ''
-fetch(`https://api.ipregistry.co/?key=xu1vqqbg0xmho0nq`)
-    .then(response => response.json())
-    .then(data=>{
-        timeZonePoint = data.time_zone.current_time;
-        timeZonePoint = timeZonePoint.substr(timeZonePoint.length-6, timeZonePoint.length);
-        timeZone = data.time_zone.id;
-    })
-if(timeZone=='') timeZone='Asia/Dhaka', timeZonePoint="+06:00";
+// fetch(`https://api.ipregistry.co/?key=xu1vqqbg0xmho0nq`)
+//     .then(response => response.json())
+//     .then(data=>{
+//         timeZonePoint = data.time_zone.current_time;
+//         timeZonePoint = timeZonePoint.substr(timeZonePoint.length-6, timeZonePoint.length);
+//         timeZone = data.time_zone.id;
+//     })
+// if(timeZone=='') timeZone='Asia/Dhaka', timeZonePoint="+06:00";
 
 loader.classList.add("hide-item");
 
@@ -293,7 +293,7 @@ function fetchMore(username){
 fetch(`https://cp-contests.vercel.app/time/?timeZone=${timeZone}`)
 .then(response=>response.json())
 .then(data=>{
-    const dateTime = `${data}<br>Timezone : ${timeZonePoint}`;
+    const dateTime = `${data}<br>Timezone : ${timeZone}`;
     const timezone = document.getElementById('timezone').innerHTML = dateTime;
 })
 
