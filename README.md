@@ -26,7 +26,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/TerminalWarlord/cp-contests.svg?style=social&label=Star)](https://github.com/TerminalWarlord/CP-Contests) ![GitHub followers](https://img.shields.io/github/followers/TerminalWarlord.svg?style=social&label=Follow)
 
 [![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-blue)](https://t.me/JayBeeBots)
-![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/TerminalWarlord/CodeForces-Ladder-API)
+![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/TerminalWarlord/CP-Contests)
 
 ---
 ### Star the Repo if you find it useful :heart:
