@@ -52,7 +52,7 @@
 ### CodeForces Ladder
  ![CodeForces Ladder](docs/ladder.gif)
 
- * Find top 50 problems on a spefic rating. 
+ * Find top 50 problems on a specific rating. 
  * Status column indicates if the user has solved a problem or not.
 
 
