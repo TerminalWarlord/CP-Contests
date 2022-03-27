@@ -21,6 +21,41 @@
 </div>
 
 
+
+### Contest Updates
+ ![Contest Updates](docs/contests.gif)
+
+ * Get list of all the running and upcoming contests
+ * Timezone is automatically adjusted according to your location.
+
+
+
+### Performance of Recent Codeforces Contests
+ ![CF Contests](docs/cf_contests.gif)
+
+ * Analyze your performances on CF contests
+ * Analyze problems solved by user, tags, rating and so on. 
+
+
+
+
+### Online IDE
+ ![Online IDE](docs/ide.gif)
+
+ * Compile and run your code online.
+ * Languages supported are : `C`, `C++`, `Python2`, `Python3`, `PHP`, `GO`, `Perl`, `Ruby`, `Scala` and `Node.JS`
+
+
+
+
+
+### CodeForces Ladder
+ ![CodeForces Ladder](docs/ladder.gif)
+
+ * Find top 50 problems on a spefic rating. 
+ * Status column indicates if the user has solved a problem or not.
+
+
 ### Show some :heart: and :star: the repo to support the project
 
 [![GitHub stars](https://img.shields.io/github/stars/TerminalWarlord/cp-contests.svg?style=social&label=Star)](https://github.com/TerminalWarlord/CP-Contests) ![GitHub followers](https://img.shields.io/github/followers/TerminalWarlord.svg?style=social&label=Follow)
